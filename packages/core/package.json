@@ -1,0 +1,50 @@
+{
+  "name": "@wax-wallet-connect/sdk-core",
+  "license": "MIT",
+  "version": "1.0.6",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "",
+  "keywords": [
+    "wax-walletconnect",
+    "walletconnect"
+  ],
+  "module": "dist/sdk.esm.js",
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts*\"",
+    "lint:fix": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "test": "vitest --config ./vitest.config.ts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not ie <= 99",
+      "not android <= 4.4.4",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^18.2.24",
+    "@walletconnect/sign-client": "^2.10.1",
+    "@walletconnect/types": "^2.10.1",
+    "@web3modal/standalone": "^2.4.3",
+    "axios": "^1.5.1",
+    "eosjs": "^22.1.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
